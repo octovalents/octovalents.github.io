@@ -10,21 +10,130 @@
         <header>
             <a href="#" class="logo">Benidictus</a>
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </header>
         <div class="container">
-            <hr />
+            <div class="banner">
+                <div>
+                    <span class="text1">Create</span>
+                    <span class="text2">impact</span>
+                </div>
+                <div>
+                    <span class="text3">with</span>
+                    <span class="text4">IT solution</span>
+                </div>
+            </div>
+            <hr class="line-heading" id="about" />
+            <h1 class="subheading">About</h1>
+            <div class="about">
+                <div class="about-container">
+                    <img
+                        id="photo"
+                        src="./img/profile/profile.jpg"
+                        alt="My photo"
+                    />
+                    <ul>
+                        <li>
+                            <div class="greet" id="parent">
+                                Hi there!
+                                <div id="border"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="about-text">
+                                My name is Benidictus Galih, a final year
+                                undergraduate student from Institut Teknologi
+                                Bandung. I have an experience learning as a
+                                machine learning path student at Bangkit Academy
+                                led by Google, Tokopedia, Gojek, & Traveloka.
+                                Browse my site to know more.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="about-btn">
+                    <li>
+                        <a href="#" class="button">
+                            <figure><img src="./img/icon/send.png" /></figure>
+                            <div class="text">Contact me</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="button">
+                            <figure><img src="./img/icon/file.png" /></figure>
+                            <div class="text">My resume</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="line-heading" id="skills" />
+            <h1 class="subheading">My skills</h1>
+            <p class="subtitle">I have several skills that I’m capable of:</p>
+            <div class="skills"></div>
+            <hr class="line-heading" id="projects" />
+            <h1 class="subheading">My projects</h1>
+            <p class="subtitle">Top projects that led me developed my skills</p>
+            <div class="projects"></div>
+            <hr class="line-heading" id="contact" />
+            <h1 class="subheading">Contact me</h1>
+            <p class="subtitle">
+                Send me an email if you are interested in inviting me to develop
+                your project.
+            </p>
+            <div class="contact">
+                <div class="msg-email">
+                    <input type="text" name="" id="name" placeholder="Name" />
+                    <input type="email" name="" id="mail" placeholder="Email" />
+                    <textarea
+                        name=""
+                        id="msg"
+                        cols="30"
+                        rows="10"
+                        placeholder="Message"
+                    ></textarea>
+                    <a href="#" class="btn-send">Send</a>
+                </div>
+                <div class="line-or">
+                    <hr />
+                    <p>OR</p>
+                    <hr />
+                </div>
+                <h2>Connect with me</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/benidictusgalihmp"
+                            ><img src="./img/icon/linkedin.png" alt="Linkedin"
+                        /></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/BenidictusG"
+                            ><img src="./img/icon/twitter.png" alt="Twitter"
+                        /></a>
+                    </li>
+                    <li>
+                        <a href="mailto:benidictusgalih@gmail.com"
+                            ><img src="./img/icon/mail.png" alt="Email"
+                        /></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/benidictusgalihmp"
+                            ><img src="./img/icon/github.png" alt="Github"
+                        /></a>
+                    </li>
+                </ul>
+            </div>
             <footer>
+                <hr class="line-footer" />
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <p>Built in pure HTML, CSS, and Javascript.</p>
             </footer>
