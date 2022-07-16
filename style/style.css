@@ -1,0 +1,126 @@
+@font-face {
+    font-family: manrope;
+    src: url(https://fonts.google.com/download?family=Manrope);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: manrope;
+}
+
+body {
+    background: #fff;
+    min-height: 200vh;
+}
+
+/* ### HEADER ### */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+}
+
+header.sticky {
+    padding: 15px 100px;
+    background: #212326;
+}
+
+header .logo {
+    position: relative;
+    font-weight: 700;
+    text-decoration: none;
+    color: #42474c;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    margin-left: 70px;
+}
+
+header.sticky .logo {
+    color: #fff;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 70px;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    padding: 10px 25px;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #42474c;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+header.sticky ul li a {
+    color: #fff;
+}
+
+.container {
+    margin: 10px 420px;
+}
+
+.container hr {
+    border: none;
+    height: 2px;
+    background-color: #212326;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+/* ### FOOTER ### */
+
+footer {
+    letter-spacing: 2px;
+    font-weight: 500px;
+}
+
+footer ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li {
+    position: relative;
+    list-style: none;
+}
+
+footer ul li a {
+    position: relative;
+    margin: 0 50px;
+    font-weight: 500px;
+    text-decoration: none;
+    color: #42474c;
+}
+
+footer p {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    color: #42474c;
+}
