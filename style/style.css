@@ -92,7 +92,7 @@ header.sticky ul li a {
     border: none;
     height: 2px;
     background-color: #212326;
-    margin-top: 200px;
+    margin-top: 150px;
     margin-bottom: 120px;
 }
 /* ### SUBHEADING ### */
@@ -224,7 +224,7 @@ header.sticky ul li a {
     color: #42474c;
     letter-spacing: 1px;
     border-radius: 10px;
-    box-shadow: 4px 4px 7px rgb(155, 155, 155);
+    box-shadow: -4px -4px 7px rgb(155, 155, 155) inset;
 }
 
 .button .text {
@@ -232,6 +232,76 @@ header.sticky ul li a {
     text-align: center;
     margin-left: 20px;
     font-weight: bold;
+}
+
+/* ############################ MY SKILLS ############################ */
+.fav-tech {
+    width: 100%;
+    margin-top: 100px;
+    text-align: left;
+}
+
+.fav-tech h2 {
+    font-size: 1.6em;
+    color: #42474c;
+    letter-spacing: 1px;
+}
+
+.fav-tech ul {
+    position: relative;
+    margin-top: 20px;
+    width: fit-content;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    border-radius: 10px;
+    box-shadow: 2px 2px 7px rgb(155, 155, 155) inset;
+}
+
+.fav-tech li {
+    position: relative;
+    list-style: none;
+    margin-right: 10px;
+}
+
+.fav-tech ul li img {
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.skill-list ul {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.skill-list li {
+    position: relative;
+    list-style: none;
+    margin-right: 30px;
+}
+
+.skill-list img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.skill-list h3 {
+    color: #42474c;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+}
+
+.skill-list p {
+    color: #888171;
+    max-width: 300px;
 }
 
 /* ############################ CONTACT ############################ */
@@ -266,7 +336,7 @@ textarea {
     text-align: center;
     padding: 18px 70px;
     margin-top: 20px;
-    box-shadow: 4px 4px 7px rgb(155, 155, 155);
+    box-shadow: -4px -4px 7px rgb(155, 155, 155) inset;
 }
 
 .line-or {
