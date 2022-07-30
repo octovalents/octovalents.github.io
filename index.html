@@ -5,11 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Benidictus Galih</title>
         <link rel="stylesheet" href="./style/style.css" />
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="./img/icon/favicon-light.ico"
+        />
     </head>
-    <body>
+    <body class="main" data-theme="default">
         <header>
             <a href="#" class="logo">Benidictus</a>
-            <ul>
+            <ul class="horz-list">
+                <li>
+                    <a>
+                        <img id="toggler-theme" src="./img/icon/sun.png" />
+                    </a>
+                </li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -19,7 +29,7 @@
         <div class="container">
             <div class="banner">
                 <div>
-                    <span class="text1">Create</span>
+                    <span class="text1">Creating</span>
                     <span class="text2">impact</span>
                 </div>
                 <div>
@@ -27,55 +37,61 @@
                     <span class="text4">IT solution</span>
                 </div>
             </div>
-            <hr class="line-heading" id="about" />
-            <h1 class="subheading">About</h1>
-            <div class="about">
-                <div class="about-container">
-                    <img
-                        id="photo"
-                        src="./img/profile/profile.jpg"
-                        alt="My photo"
-                    />
-                    <ul>
+            <div class="section">
+                <hr id="about" class="section-line" />
+                <div class="section-title">
+                    <h1>About</h1>
+                </div>
+                <div class="about">
+                    <div class="content">
+                        <img src="./img/profile/profile.jpg" alt="My photo" />
+                        <ul>
+                            <li>
+                                <div id="greet">Hi there!</div>
+                            </li>
+                            <li>
+                                <p>
+                                    My name is Benidictus Galih, a final year
+                                    undergraduate student from Institut
+                                    Teknologi Bandung. I have an experience
+                                    learning as a machine learning path student
+                                    at Bangkit Academy led by Google, Tokopedia,
+                                    Gojek, & Traveloka. Browse my site to know
+                                    more.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="horz-list">
                         <li>
-                            <div class="greet" id="parent">
-                                Hi there!
-                                <div id="border"></div>
-                            </div>
+                            <a href="#contact" class="btn">
+                                <figure>
+                                    <img src="./img/icon/send.png" />
+                                </figure>
+                                <p>Contact me</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="about-text">
-                                My name is Benidictus Galih, a final year
-                                undergraduate student from Institut Teknologi
-                                Bandung. I have an experience learning as a
-                                machine learning path student at Bangkit Academy
-                                led by Google, Tokopedia, Gojek, & Traveloka.
-                                Browse my site to know more.
-                            </p>
+                            <a href="#" class="btn">
+                                <figure>
+                                    <img src="./img/icon/file.png" />
+                                </figure>
+                                <p>My resume</p>
+                            </a>
                         </li>
                     </ul>
                 </div>
-                <ul class="about-btn">
-                    <li>
-                        <a href="#contact" class="button">
-                            <figure><img src="./img/icon/send.png" /></figure>
-                            <div class="text">Contact me</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="button">
-                            <figure><img src="./img/icon/file.png" /></figure>
-                            <div class="text">My resume</div>
-                        </a>
-                    </li>
-                </ul>
             </div>
-            <hr class="line-heading" id="skills" />
-            <h1 class="subheading">My skills</h1>
-            <p class="subtitle">I have several skills that I’m capable of:</p>
-            <div class="skills">
-                <div class="skill-list">
-                    <ul>
+            <div class="section">
+                <hr id="skills" class="section-line" />
+                <div class="section-title">
+                    <h1>My skills</h1>
+                    <p class="subtitle">
+                        I have several skills that I’m capable of:
+                    </p>
+                </div>
+                <div class="skills">
+                    <ul class="horz-list content">
                         <li>
                             <img
                                 src="./img/icon/android.png"
@@ -83,15 +99,13 @@
                             />
                             <h3>Android Development</h3>
                             <p>
-                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                                Lorem ipsum Lorem ipsum Lorem ipsum
+                                During my learning at ITB, I really enjoyed the
+                                android project class about COVID guidance using
+                                Kotlin. I tried to explore more by learning at
+                                Bangkit academy from machine learning
+                                perspective. I learned new things about how to
+                                develop, maintain, and deploy machine learning
+                                model into android apps or cloud environments.
                             </p>
                         </li>
                         <li>
@@ -131,10 +145,9 @@
                             </p>
                         </li>
                     </ul>
-                </div>
-                <div class="fav-tech">
+
                     <h2>Current Favourite Technologies</h2>
-                    <ul>
+                    <ul class="horz-list fav-tech">
                         <li>
                             <img
                                 src="./img/icon/python.png"
@@ -180,152 +193,179 @@
                     </ul>
                 </div>
             </div>
-            <hr class="line-heading" id="projects" />
-            <h1 class="subheading">My projects</h1>
-            <p class="subtitle">Top projects that led me developed my skills</p>
-            <div class="projects">
-                <div class="card">
-                    <img
-                        src="./img/projects/daur-nusantara/tensorboard.png"
-                        alt="Daur Nusantara"
-                        class="img-project"
-                    />
-                    <div class="card-content">
-                        <h2>Daur Nusantara</h2>
-                        <ul>
-                            <li>Object Detection</li>
-                            <li>Machine Learning</li>
-                            <li>Tensorflow</li>
-                            <li>Python</li>
-                        </ul>
-                        <p>Lorem ipsum</p>
-                        <a href="https://github.com/C22-PS161" class="button">
-                            <figure><img src="./img/icon/github.png" /></figure>
-                            <div class="text">Source code</div>
-                        </a>
-                    </div>
+            <div class="section">
+                <hr id="projects" class="section-line" />
+                <div class="section-title">
+                    <h1>My projects</h1>
+                    <p class="subtitle">
+                        Top projects that led me to develop my skills
+                    </p>
                 </div>
-                <div class="card">
-                    <div class="card-content">
-                        <h2>Cakrawala.id</h2>
-                        <ul>
-                            <li>Desktop Apps</li>
-                            <li>Xamarin Forms</li>
-                            <li>PostgreSQL</li>
-                            <li>C#</li>
-                        </ul>
-                        <p>Lorem ipsum</p>
-                        <a
-                            href="https://github.com/benidictusgalihmp/Frontend-Cakrawala.id"
-                            class="button"
-                        >
-                            <figure><img src="./img/icon/github.png" /></figure>
-                            <div class="text">Source code</div>
-                        </a>
+                <div class="projects">
+                    <div class="card">
+                        <img
+                            src="./img/projects/daur-nusantara/tensorboard.png"
+                            alt="Daur Nusantara"
+                            class="img-project"
+                        />
+                        <div class="card-content">
+                            <h2>Daur Nusantara</h2>
+                            <ul class="horz-list">
+                                <li>Object Detection</li>
+                                <li>Machine Learning</li>
+                                <li>Tensorflow</li>
+                                <li>Python</li>
+                            </ul>
+                            <p class="card-text">Lorem ipsum</p>
+                            <a href="https://github.com/C22-PS161" class="btn">
+                                <figure>
+                                    <img src="./img/icon/github.png" />
+                                </figure>
+                                <p>Source code</p>
+                            </a>
+                        </div>
                     </div>
-                    <img
-                        src="./img/projects/cakrawala/dashboard.png"
-                        alt="Cakrawala.id"
-                        class="img-project"
-                    />
-                </div>
-                <div class="card">
-                    <img
-                        src="./img/projects/perlu-dilindungi/news-page.jpg"
-                        alt="Perlu Dilindungi"
-                        class="img-project"
-                    />
-                    <div class="card-content">
-                        <h2>Perlu Dilindungi</h2>
-                        <ul>
-                            <li>Android Development</li>
-                            <li>Kotlin</li>
-                            <li>SQLite</li>
-                            <li>Retrofit</li>
-                        </ul>
-                        <p>Lorem ipsum</p>
-                        <a
-                            href="https://github.com/benidictusgalihmp/Perlu-Dilindungi"
-                            class="button"
-                        >
-                            <figure><img src="./img/icon/github.png" /></figure>
-                            <div class="text">Source code</div>
-                        </a>
+                    <div class="card">
+                        <div class="card-content">
+                            <h2>Cakrawala.id</h2>
+                            <ul class="horz-list">
+                                <li>Desktop Apps</li>
+                                <li>Xamarin Forms</li>
+                                <li>PostgreSQL</li>
+                                <li>C#</li>
+                            </ul>
+                            <p class="card-text">Lorem ipsum</p>
+                            <a
+                                href="https://github.com/benidictusgalihmp/Frontend-Cakrawala.id"
+                                class="btn"
+                            >
+                                <figure>
+                                    <img src="./img/icon/github.png" />
+                                </figure>
+                                <p>Source code</p>
+                            </a>
+                        </div>
+                        <img
+                            src="./img/projects/cakrawala/dashboard.png"
+                            alt="Cakrawala.id"
+                            class="img-project"
+                        />
                     </div>
+                    <div class="card">
+                        <img
+                            src="./img/projects/perlu-dilindungi/news-page.jpg"
+                            alt="Perlu Dilindungi"
+                            class="img-project"
+                        />
+                        <div class="card-content">
+                            <h2>Perlu Dilindungi</h2>
+                            <ul class="horz-list">
+                                <li>Android Development</li>
+                                <li>Kotlin</li>
+                                <li>SQLite</li>
+                                <li>Retrofit</li>
+                            </ul>
+                            <p class="card-text">Lorem ipsum</p>
+                            <a
+                                href="https://github.com/benidictusgalihmp/Perlu-Dilindungi"
+                                class="btn"
+                            >
+                                <figure>
+                                    <img src="./img/icon/github.png" />
+                                </figure>
+                                <p>Source code</p>
+                            </a>
+                        </div>
+                    </div>
+                    <a
+                        href="https://github.com/benidictusgalihmp?tab=repositories"
+                        class="btn-proj"
+                    >
+                        <p>More projects</p>
+                        <figure>
+                            <img src="./img/icon/arrow-right-light.png" />
+                        </figure>
+                    </a>
                 </div>
-                <a
-                    href="https://github.com/benidictusgalihmp?tab=repositories"
-                    class="button-projects"
-                >
-                    <p>More projects</p>
-                    <figure>
-                        <img src="./img/icon/arrow-right-light.png" />
-                    </figure>
-                </a>
             </div>
-            <hr class="line-heading" id="contact" />
-            <h1 class="subheading">Contact me</h1>
-            <p class="subtitle">
-                Send me an email if you are interested in inviting me to develop
-                your project.
-            </p>
-            <div class="contact">
-                <div class="msg-email">
-                    <input type="text" name="" id="name" placeholder="Name" />
-                    <input type="email" name="" id="mail" placeholder="Email" />
-                    <textarea
-                        name=""
-                        id="msg"
-                        cols="30"
-                        rows="10"
-                        placeholder="Message"
-                    ></textarea>
-                    <a href="#" class="btn-send">Send</a>
+            <div class="section">
+                <hr id="contact" class="section-line" />
+                <div class="section-title">
+                    <h1>Contact me</h1>
+                    <p class="subtitle">
+                        Send me an email if you are interested in inviting me to
+                        develop your project.
+                    </p>
                 </div>
-                <div class="line-or">
-                    <hr />
-                    <p>OR</p>
-                    <hr />
+                <div class="contact">
+                    <div class="msg-email">
+                        <input
+                            type="text"
+                            name=""
+                            id="name"
+                            placeholder="Name"
+                        />
+                        <input
+                            type="email"
+                            name=""
+                            id="mail"
+                            placeholder="Email"
+                        />
+                        <textarea
+                            name=""
+                            id="msg"
+                            cols="30"
+                            rows="10"
+                            placeholder="Message"
+                        ></textarea>
+                        <a href="#" class="btn">Send</a>
+                    </div>
+                    <div class="line-or">
+                        <hr />
+                        <p>OR</p>
+                        <hr />
+                    </div>
+                    <h2>Connect with me</h2>
+                    <ul class="horz-list">
+                        <li>
+                            <a
+                                href="https://www.linkedin.com/in/benidictusgalihmp"
+                                ><img
+                                    src="./img/icon/linkedin.png"
+                                    alt="Linkedin"
+                                    title="Linkedin"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/BenidictusG"
+                                ><img
+                                    src="./img/icon/twitter.png"
+                                    alt="Twitter"
+                                    title="Twitter"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href="mailto:benidictusgalih@gmail.com"
+                                ><img
+                                    src="./img/icon/mail.png"
+                                    alt="Email"
+                                    title="Email"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/benidictusgalihmp"
+                                ><img
+                                    src="./img/icon/github.png"
+                                    alt="Github"
+                                    title="Github"
+                            /></a>
+                        </li>
+                    </ul>
                 </div>
-                <h2>Connect with me</h2>
-                <ul>
-                    <li>
-                        <a href="https://www.linkedin.com/in/benidictusgalihmp"
-                            ><img
-                                src="./img/icon/linkedin.png"
-                                alt="Linkedin"
-                                title="Linkedin"
-                        /></a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/BenidictusG"
-                            ><img
-                                src="./img/icon/twitter.png"
-                                alt="Twitter"
-                                title="Twitter"
-                        /></a>
-                    </li>
-                    <li>
-                        <a href="mailto:benidictusgalih@gmail.com"
-                            ><img
-                                src="./img/icon/mail.png"
-                                alt="Email"
-                                title="Email"
-                        /></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/benidictusgalihmp"
-                            ><img
-                                src="./img/icon/github.png"
-                                alt="Github"
-                                title="Github"
-                        /></a>
-                    </li>
-                </ul>
             </div>
             <footer>
-                <hr class="line-footer" />
-                <ul>
+                <hr />
+                <ul class="horz-list">
                     <li><a href="#">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
@@ -335,6 +375,7 @@
                 <p>Built in pure HTML, CSS, and Javascript.</p>
             </footer>
         </div>
+
         <script type="text/javascript" src="./script/script.js"></script>
     </body>
 </html>
