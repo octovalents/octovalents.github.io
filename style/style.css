@@ -92,6 +92,101 @@ html {
     scroll-behavior: smooth;
 }
 
+.container {
+    margin: 0 20vw;
+    text-align: center;
+}
+
+.section {
+    margin-top: 150px;
+}
+
+.section hr {
+    border: none;
+    height: 2px;
+}
+
+.section-line {
+    background-color: var(--section-line-color);
+    margin-bottom: 120px;
+}
+
+.section .section-title {
+    margin-bottom: 100px;
+}
+
+.section h1 {
+    color: var(--section-title-color);
+    font-weight: bold;
+    font-size: 2.4em;
+    letter-spacing: 1px;
+}
+
+.section .subtitle {
+    margin-top: 10px;
+    color: var(--section-subtitle-color);
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.horz-list {
+    position: relative;
+    display: flex;
+}
+
+.horz-list li {
+    position: relative;
+    list-style: none;
+}
+
+.horz-list li a {
+    position: relative;
+    text-decoration: none;
+}
+
+.btn {
+    width: 14vw;
+    height: 6.5vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1vh 2.6vw;
+    color: var(--btn-text-color);
+    font-size: 0.8vw;
+    font-weight: bold;
+    background-color: var(--btn-bg-color);
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.25) inset;
+}
+
+.btn:hover {
+    background-color: var(--btn-hover-bg-color);
+}
+
+.btn:active {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25) inset;
+}
+
+.btn img {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-right: 20px;
+}
+
+.reveal {
+    position: relative;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+}
+
 /* ############################ NAVBAR ############################ */
 
 header {
@@ -186,91 +281,6 @@ header.sticky ul li a #toggler-theme {
     border-radius: 10px;
 }
 
-.container {
-    margin: 0 20vw;
-    text-align: center;
-}
-
-.section {
-    margin-top: 150px;
-}
-
-.section hr {
-    border: none;
-    height: 2px;
-}
-
-.section-line {
-    background-color: var(--section-line-color);
-    margin-bottom: 120px;
-}
-
-.section .section-title {
-    margin-bottom: 100px;
-}
-
-.section h1 {
-    color: var(--section-title-color);
-    font-weight: bold;
-    font-size: 2.4em;
-    letter-spacing: 1px;
-}
-
-.section .subtitle {
-    margin-top: 10px;
-    color: var(--section-subtitle-color);
-    letter-spacing: 1px;
-    text-align: center;
-}
-
-.horz-list {
-    position: relative;
-    display: flex;
-}
-
-.horz-list li {
-    position: relative;
-    list-style: none;
-}
-
-.horz-list li a {
-    position: relative;
-    text-decoration: none;
-}
-
-.btn {
-    width: 14vw;
-    height: 6.5vh;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 1vh 2.6vw;
-    color: var(--btn-text-color);
-    font-size: 0.8vw;
-    font-weight: bold;
-    background-color: var(--btn-bg-color);
-    letter-spacing: 1px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 10px;
-    box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.25) inset;
-}
-
-.btn:hover {
-    background-color: var(--btn-hover-bg-color);
-}
-
-.btn:active {
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25) inset;
-}
-
-.btn img {
-    width: 1.5vw;
-    height: 1.5vw;
-    margin-right: 20px;
-}
-
 /* ############################ LANDING PAGE ############################ */
 
 .banner {
@@ -323,7 +333,7 @@ header.sticky ul li a #toggler-theme {
     list-style: none;
 }
 
-.section .about .content ul li #greet {
+.section .about .content ul li .greet {
     height: 60px;
     white-space: nowrap;
     overflow: hidden;
@@ -334,8 +344,8 @@ header.sticky ul li a #toggler-theme {
 }
 
 /* Animation */
-.section .about .content ul li #greet {
-    animation: animated-text 700ms steps(30, end) 1s 1 normal both;
+.section .about .content ul li .greet.hello {
+    animation: animated-text 400ms steps(30, end) 0.5s 1 normal both;
 }
 
 /* text animation */

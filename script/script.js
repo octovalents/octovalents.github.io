@@ -8,26 +8,16 @@ let logo_navbar = this.document.getElementById("logo-navbar");
 window.addEventListener("scroll", function () {
     header.classList.toggle("sticky", window.scrollY > 0);
 
-    let image = this.document.getElementById("toggler-theme");
-    if (window.scrollY == 0 && main_.getAttribute("data-theme") == "default") {
-        image.setAttribute("src", "./img/icon/sun-dark.png");
-    } else if (
-        window.scrollY > 0 &&
-        main_.getAttribute("data-theme") == "default"
-    ) {
-        image.setAttribute("src", "./img/icon/sun-light.png");
-    } else if (
-        window.scrollY == 0 &&
-        main_.getAttribute("data-theme") == "dark"
-    ) {
-        image.setAttribute("src", "./img/icon/moon.png");
-    } else if (
-        window.scrollY > 0 &&
-        main_.getAttribute("data-theme") == "dark"
-    ) {
+    if (main_.getAttribute("data-theme") == "default") {
+        if (window.scrollY > 0) {
+            image.setAttribute("src", "./img/icon/sun-light.png");
+        } else {
+            image.setAttribute("src", "./img/icon/sun-dark.png");
+        }
+    } else if (main_.getAttribute("data-theme") == "dark") {
         image.setAttribute("src", "./img/icon/moon.png");
     } else {
-        console.log("Something is wrong...");
+        console.log("[Scroll listener] Something is wrong...");
     }
 });
 
@@ -53,3 +43,37 @@ document.getElementById("toggler-theme").addEventListener("click", (event) => {
         console.log("[Toggler listener] Something is wrong...");
     }
 });
+
+window.addEventListener("scroll", reveal);
+
+function reveal() {
+    let reveals = document.querySelectorAll(".reveal");
+
+    for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let revealTop = reveals[i].getBoundingClientRect().top;
+        let revealPoint = 150;
+
+        if (revealTop < windowHeight - revealPoint) {
+            reveals[i].classList.add("active");
+        } else {
+            reveals[i].classList.remove("active");
+        }
+    }
+}
+
+window.addEventListener("scroll", helloAnimated);
+
+function helloAnimated() {
+    let greet = document.querySelector(".greet");
+
+    let windowHeight = window.innerHeight;
+    let greetTop = greet.getBoundingClientRect().top;
+    let greetPoint = 150;
+
+    if (greetTop < windowHeight - greetPoint) {
+        greet.classList.add("hello");
+    } else {
+        greet.classList.remove("hello");
+    }
+}
