@@ -11,9 +11,10 @@
     --navbar-line-color: #fff;
     --navbar-btn-bg-color: #212326;
     --navbar-btn-bg-hover-color: #fff;
-    --navbar-btn-text-hover-sticky-color: #ccc;
-    --navbar-btn-text-hover-nonsticky-color: #a1a1a1;
-    --navbar-btn-text-nonhover-color: #fff;
+    --navbar-btn-text-nonsticky-nonhover-color: #212326;
+    --navbar-btn-text-nonsticky-hover-color: #a1a1a1;
+    --navbar-btn-text-sticky-nonhover-color: #fff;
+    --navbar-btn-text-sticky-hover-color: #ccc;
     --logo-text-focus-color: #00ba34;
     --logo-text-nonfocus-color: #42474c;
     --section-line-color: #212326;
@@ -34,6 +35,7 @@
     --contact-line-color: #212326;
     --contact-or-color: #888171;
     --footer-btn-text-color: #42474c;
+    --footer-btn-text-hover-color: #00ba34;
     --footer-text-color: #42474c;
 }
 
@@ -44,9 +46,10 @@
     --navbar-line-color: #0d4a56;
     --navbar-btn-bg-color: #201a30;
     --navbar-btn-bg-hover-color: #0df6e3;
-    --navbar-btn-text-hover-sticky-color: #0d4a56;
-    --navbar-btn-text-hover-nonsticky-color: #0d4a56;
-    --navbar-btn-text-nonhover-color: #0df6e3;
+    --navbar-btn-text-nonsticky-nonhover-color: #0df6e3;
+    --navbar-btn-text-nonsticky-hover-color: #1f98af;
+    --navbar-btn-text-sticky-nonhover-color: #0df6e3;
+    --navbar-btn-text-sticky-hover-color: #1f98af;
     --logo-text-focus-color: #0df6e3;
     --logo-text-nonfocus-color: #f3f0f5;
     --section-line-color: #0df6e3;
@@ -55,6 +58,7 @@
     --hello-text-color: #f3f0f5;
     --text-color: #948fa4;
     --btn-bg-color: #0df6e3;
+    --btn-hover-bg-color: #228179;
     --btn-text-color: #0d4a56;
     --header-color: #f3f0f5;
     --tag-bg-color: #0d4a56;
@@ -66,6 +70,7 @@
     --contact-line-color: #f3f0f5;
     --contact-or-color: #f3f0f5;
     --footer-btn-text-color: #0df6e3;
+    --footer-btn-text-hover-color: #1f98af;
     --footer-text-color: #f3f0f5;
 }
 
@@ -79,6 +84,8 @@
 body {
     background: var(--body-bg-color);
     min-height: 200vh;
+    font-size: 100%;
+    transition: 0.6s;
 }
 
 html {
@@ -106,20 +113,33 @@ header.sticky {
     background: var(--navbar-bg-color);
 }
 
-header.sticky .logo {
-    color: var(--navbar-btn-text-nonhover-color);
+header.sticky .logo p {
+    color: var(--navbar-btn-text-sticky-nonhover-color);
 }
 
 header .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    font-weight: 700;
     text-decoration: none;
-    color: #42474c;
-    font-size: 2em;
+    font-size: 1.5em;
+    margin-left: 6.5vw;
+}
+
+header .logo p {
+    font-weight: 700;
+    color: var(--navbar-btn-text-nonsticky-nonhover-color);
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin-left: 1vw;
     transition: 0.6s;
-    margin-left: 6.5vw;
+}
+
+header .logo img {
+    margin: auto;
+    transition: 0.6s;
 }
 
 header ul {
@@ -129,19 +149,19 @@ header ul {
 header ul li a {
     padding: 10px 1.5vw;
     margin: 0 20px;
-    color: var(--navbar-bg-color);
+    color: var(--navbar-btn-text-nonsticky-nonhover-color);
     letter-spacing: 2px;
     font-weight: 500;
     transition: 0.6s;
 }
 
 header ul li a:hover {
-    color: var(--navbar-btn-text-hover-nonsticky-color);
+    color: var(--navbar-btn-text-nonsticky-hover-color);
     transition: 0.1s;
 }
 
 header.sticky ul li a:hover {
-    color: var(--navbar-btn-text-hover-sticky-color);
+    color: var(--navbar-btn-text-sticky-hover-color);
     transition: 0.1s;
 }
 
@@ -157,7 +177,7 @@ header ul li a #toggler-theme {
 }
 
 header.sticky ul li a {
-    color: var(--navbar-btn-text-nonhover-color);
+    color: var(--navbar-btn-text-sticky-nonhover-color);
 }
 
 header.sticky ul li a #toggler-theme {
@@ -219,14 +239,15 @@ header.sticky ul li a #toggler-theme {
 }
 
 .btn {
-    width: fit-content;
-    height: 70px;
+    width: 14vw;
+    height: 6.5vh;
     position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 10px 50px;
+    padding: 1vh 2.6vw;
     color: var(--btn-text-color);
+    font-size: 0.8vw;
     font-weight: bold;
     background-color: var(--btn-bg-color);
     letter-spacing: 1px;
@@ -244,7 +265,9 @@ header.sticky ul li a #toggler-theme {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25) inset;
 }
 
-.btn figure {
+.btn img {
+    width: 1.5vw;
+    height: 1.5vw;
     margin-right: 20px;
 }
 
@@ -252,7 +275,7 @@ header.sticky ul li a #toggler-theme {
 
 .banner {
     position: relative;
-    margin: 37vh 0 55.55vh 0;
+    margin: 45vh 0 55.55vh 0;
     font-size: 5em;
 }
 
@@ -337,7 +360,7 @@ header.sticky ul li a #toggler-theme {
 }
 
 .section .about .horz-list li {
-    margin: 0 50px;
+    margin: 0 2.6vw;
 }
 
 /* ############################ MY SKILLS SECTION ############################ */
@@ -356,8 +379,8 @@ header.sticky ul li a #toggler-theme {
 }
 
 .skills .content img {
-    width: 100px;
-    height: 100px;
+    width: 5.2vw;
+    height: 5.2vw;
     object-fit: contain;
     margin-bottom: 20px;
 }
@@ -370,6 +393,7 @@ header.sticky ul li a #toggler-theme {
 }
 
 .skills .content p {
+    font-size: 0.9em;
     color: var(--text-color);
     max-width: 300px;
 }
@@ -407,8 +431,6 @@ header.sticky ul li a #toggler-theme {
 /* ############################ MY PROJECTS SECTION ############################ */
 
 .card {
-    width: 100%;
-    height: 400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -418,16 +440,16 @@ header.sticky ul li a #toggler-theme {
 .card .img-project {
     position: relative;
     object-fit: contain;
-    width: 40%;
-    max-width: 500px;
-    max-height: 80%;
+    width: 26vw;
+    height: 26vw;
     padding: 10px;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 4px var(--section-line-color);
 }
 
 .card-content {
     position: relative;
     text-align: left;
+    width: 30vw;
 }
 
 .card-content h2 {
@@ -440,10 +462,11 @@ header.sticky ul li a #toggler-theme {
 
 .card-content .card-text {
     width: 100%;
-    height: 175px;
-    padding: 20px;
+    height: 18vh;
+    padding: 1vw;
     box-shadow: 3px 3px 7px #b4b4b4 inset;
     border-radius: 10px;
+    font-size: 0.9vw;
     color: var(--column-text-color);
     background-color: var(--form-bg-color);
 }
@@ -461,13 +484,14 @@ header.sticky ul li a #toggler-theme {
 
 .card-content ul li {
     margin-right: 15px;
-    padding: 12px;
+    padding: 0.6vw;
     box-shadow: 2px 2px 7px #b4b4b4 inset;
     border-radius: 10px;
     color: var(--tag-text-color);
     background-color: var(--tag-bg-color);
     font-weight: 600;
-    line-height: 22px;
+    font-size: 0.8vw;
+    line-height: 1.3em;
 }
 
 .btn-proj {
@@ -477,7 +501,7 @@ header.sticky ul li a #toggler-theme {
     display: flex;
     flex-direction: row;
     text-align: center;
-    padding: 15px 50px;
+    padding: 15px 2.6vw;
     text-decoration: none;
     letter-spacing: 1px;
     border-radius: 10px;
@@ -544,7 +568,7 @@ textarea {
     border-radius: 10px;
     border: none;
     margin-bottom: 30px;
-    font-size: medium;
+    font-size: 0.9vw;
     color: var(--form-text-color);
     background-color: var(--form-bg-color);
     box-shadow: 2px 2px 7px #b4b4b4 inset;
@@ -555,7 +579,8 @@ textarea {
 }
 
 .msg-email .btn {
-    padding: 5px 50px;
+    justify-content: center;
+    padding: 0.5vh 2.6vw;
     margin-top: 20px;
 }
 
@@ -606,7 +631,7 @@ footer ul li a {
 }
 
 footer ul li a:hover {
-    color: var(--section-title-color);
+    color: var(--footer-btn-text-hover-color);
 }
 
 footer p {
