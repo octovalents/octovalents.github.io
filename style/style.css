@@ -286,11 +286,15 @@ header.sticky ul li a #toggler-theme {
 .banner {
     position: relative;
     margin: 45vh 0 55.55vh 0;
-    font-size: 5em;
+    font-size: 4.2vw;
 }
 
 .banner span {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
     text-transform: uppercase;
+    display: inline-block;
 }
 
 .banner .text1,
@@ -302,6 +306,60 @@ header.sticky ul li a #toggler-theme {
 .banner .text2,
 .text3 {
     color: var(--logo-text-nonfocus-color);
+}
+
+.banner .text1 {
+    animation: animated-text1 1s steps(30, end) 1 normal both;
+}
+
+.banner .text2 {
+    animation: animated-text2 1s steps(30, end) 1s 1 normal both;
+}
+
+.banner .text3 {
+    animation: animated-text3 200ms steps(30, end) 2.5s 1 normal both;
+}
+
+.banner .text4 {
+    animation: animated-text4 1s steps(30, end) 3s 1 normal both;
+}
+
+/* text animation */
+
+@keyframes animated-text1 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 20.5vw;
+    }
+}
+
+@keyframes animated-text2 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 14.8vw;
+    }
+}
+
+@keyframes animated-text3 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 10.2vw;
+    }
+}
+
+@keyframes animated-text4 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 25.5vw;
+    }
 }
 
 /* ############################ ABOUT SECTION ############################ */
@@ -538,7 +596,7 @@ header.sticky ul li a #toggler-theme {
 /* ############################ MY CONTACT SECTION ############################ */
 
 .contact ul {
-    margin-top: 50px;
+    margin-top: 200px;
     justify-content: center;
     align-items: center;
 }
@@ -560,62 +618,6 @@ header.sticky ul li a #toggler-theme {
 
 .contact ul li a img:active {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25) inset;
-}
-
-.contact h2 {
-    font-size: 1.6em;
-    color: var(--header-color);
-    letter-spacing: 2px;
-}
-
-.msg-email {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.msg-email input,
-textarea {
-    width: 100%;
-    padding: 1.2vw 30px;
-    border-radius: 10px;
-    border: none;
-    margin-bottom: 30px;
-    font-size: 0.9vw;
-    color: var(--form-text-color);
-    background-color: var(--form-bg-color);
-    box-shadow: 2px 2px 7px #b4b4b4 inset;
-}
-
-.msg-email #msg {
-    height: 200px;
-}
-
-.msg-email .btn {
-    justify-content: center;
-    padding: 0.5vh 2.6vw;
-    margin-top: 20px;
-}
-
-.line-or {
-    display: flex;
-    margin: 100px 0 35px 0;
-    height: 30px;
-    align-items: center;
-}
-
-.line-or hr {
-    width: 100%;
-    border: none;
-    height: 1px;
-    background-color: var(--contact-line-color);
-}
-
-.line-or p {
-    font-size: 1.8em;
-    color: var(--contact-or-color);
-    padding: 0 40px;
 }
 
 /* ############################ FOOTER SECTION ############################ */
