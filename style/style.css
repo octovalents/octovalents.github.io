@@ -360,6 +360,8 @@ header.sticky ul li a #toggler-theme {
 }
 
 .section .about .content ul li p {
+    letter-spacing: 1px;
+    line-height: 23px;
     color: var(--text-color);
 }
 
@@ -404,6 +406,8 @@ header.sticky ul li a #toggler-theme {
 
 .skills .content p {
     font-size: 0.9em;
+    letter-spacing: 1px;
+    line-height: 23px;
     color: var(--text-color);
     max-width: 300px;
 }
