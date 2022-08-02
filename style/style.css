@@ -673,7 +673,11 @@ footer p {
 
 /* ############################ MEDIA QUERY ############################ */
 
-@media (max-width: 1400px) {
+@media (max-width: 1440px) {
+    .banner {
+        font-size: 4.5em;
+    }
+
     .skills .content {
         display: flex;
         margin-top: 0;
@@ -811,5 +815,14 @@ footer p {
         max-height: 50px;
         padding: 8px;
         border-radius: 10px;
+    }
+
+    .card .img-project {
+        width: 350px;
+        height: 350px;
+    }
+
+    .btn img {
+        margin-right: 10px;
     }
 }
