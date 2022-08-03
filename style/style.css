@@ -250,7 +250,7 @@ header ul {
 }
 
 header ul li a {
-    padding: 10px 1.5vw;
+    padding: 10px 15px;
     margin: 0 20px;
     color: var(--navbar-btn-text-nonsticky-nonhover-color);
     letter-spacing: 2px;
@@ -757,6 +757,7 @@ footer p {
         float: none;
         display: block;
         text-align: left;
+        margin-top: 10px;
     }
 
     footer ul li a {
@@ -870,5 +871,34 @@ footer p {
 
     .btn img {
         margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        font-size: 2.5em;
+    }
+
+    .section-line {
+        margin: 0 0 120px 0;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-content {
+        width: 100%;
+        margin: 0;
+    }
+
+    .card .img-project {
+        width: 28vh;
+        height: 28vh;
+        margin: 40px 0 40px 0;
+    }
+
+    footer ul li a {
+        margin: 0 8px;
     }
 }
