@@ -288,6 +288,18 @@ header.sticky ul li a #toggler-theme {
     border-radius: 10px;
 }
 
+.topnav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.topnav .navbar-responsive {
+    display: none;
+}
+
 /* ############################ LANDING PAGE ############################ */
 
 .banner {
@@ -718,6 +730,34 @@ footer p {
         font-size: 3em;
     }
 
+    .topnav {
+        display: block;
+    }
+
+    .topnav a {
+        position: relative;
+        display: none;
+    }
+
+    .topnav a.navbar-responsive {
+        display: block;
+        float: right;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive a.navbar-responsive {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
     footer ul li a {
         margin: 0 20px;
     }
@@ -785,6 +825,11 @@ footer p {
 
     .section-line {
         margin: 0 50px 120px 50px;
+    }
+
+    img#toggler-theme {
+        height: 20px;
+        width: 20px;
     }
 
     .contact ul li a img {

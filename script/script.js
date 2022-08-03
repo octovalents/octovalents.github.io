@@ -77,3 +77,12 @@ function helloAnimated() {
         greet.classList.remove("hello");
     }
 }
+
+function navbarResponsive() {
+    var x = document.getElementById("my-topnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
