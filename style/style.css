@@ -560,7 +560,6 @@ header.sticky ul li a #toggler-theme {
     height: 18vh;
     padding: 20px;
     letter-spacing: 1px;
-    line-height: 20px;
     box-shadow: 3px 3px 7px #b4b4b4 inset;
     border-radius: 10px;
     font-size: var(--fsize-text);
