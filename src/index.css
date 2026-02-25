@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Manrope", sans-serif;
+  --animate-reveal: reveal 1s steps(30, end) both;
+
+  /* Custom breakpoints — usable as max-nav:, max-wide: prefixes in Tailwind */
+  --breakpoint-nav: 68.75rem;   /* 1100px — nav layout boundary */
+  --breakpoint-wide: 90rem;     /* 1440px — large desktop cap    */
+}
+
+/* ── Theme variables ──────────────────────────────────────── */
+:root {
+  --body-bg: #fff;
+  --navbar-bg: #212326;
+  --navbar-border: #fff;
+  --nav-text: #212326;
+  --nav-text-hover: #a1a1a1;
+  --nav-text-sticky: #fff;
+  --nav-text-sticky-hover: #ccc;
+  --accent: #00ba34;
+  --muted: #42474c;
+}
+
+html.dark {
+  --body-bg: #201a30;
+  --navbar-bg: #201a30;
+  --navbar-border: #0d4a56;
+  --nav-text: #0df6e3;
+  --nav-text-hover: #1f98af;
+  --nav-text-sticky: #0df6e3;
+  --nav-text-sticky-hover: #1f98af;
+  --accent: #0df6e3;
+  --muted: #f3f0f5;
+}
+
+/* ── Base ─────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--body-bg);
+  min-height: 100vh;
+  transition: background 0.6s;
+}
+
+/* ── Semantic colour helpers ──────────────────────────────── */
+.nav-link {
+  color: var(--nav-text);
+}
+.nav-link:hover {
+  color: var(--nav-text-hover);
+  transition-duration: 0.1s;
+}
+.logo-text {
+  color: var(--nav-text);
+}
+.banner-accent {
+  color: var(--accent);
+}
+.banner-muted {
+  color: var(--muted);
+}
+
+/* Fluid display-size text for the hero banner */
+.text-banner {
+  font-size: clamp(2.5rem, 7.06vw - 1.85rem, 5rem);
+}
+
+/* ── Header sticky overrides ──────────────────────────────── */
+#site-header.sticky {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  background: var(--navbar-bg);
+}
+#site-header.sticky .logo-text {
+  color: var(--nav-text-sticky);
+}
+#site-header.sticky .nav-link {
+  color: var(--nav-text-sticky);
+}
+#site-header.sticky .nav-link:hover {
+  color: var(--nav-text-sticky-hover);
+}
+
+/* ── Banner animations ────────────────────────────────────── */
+@keyframes reveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
