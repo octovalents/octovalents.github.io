@@ -71,6 +71,49 @@ body {
   font-size: clamp(2.5rem, 7.06vw - 1.85rem, 5rem);
 }
 
+/* ── Hero section ────────────────────────────────────────── */
+.text-hero-name {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--accent);
+}
+.text-hero-title {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--muted);
+}
+.text-hero-summary {
+  font-size: clamp(0.95rem, 1.5vw, 1.125rem);
+  color: var(--muted);
+}
+.hero-btn-outline {
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  padding: 0.75rem 1.75rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+.hero-btn-outline:hover {
+  background: var(--accent);
+  color: var(--body-bg);
+}
+.hero-btn-solid {
+  background: var(--accent);
+  color: var(--body-bg);
+  border: 2px solid var(--accent);
+  padding: 0.75rem 1.75rem;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+.hero-btn-solid:hover {
+  opacity: 0.85;
+}
+.hero-social {
+  color: var(--muted);
+  transition: color 0.2s;
+}
+.hero-social:hover {
+  color: var(--accent);
+}
+
 /* ── Header sticky overrides ──────────────────────────────── */
 #site-header.sticky {
   padding-top: 1.25rem;
@@ -87,8 +130,26 @@ body {
   color: var(--nav-text-sticky-hover);
 }
 
-/* ── Banner animations ────────────────────────────────────── */
+/* ── Animations ──────────────────────────────────────────── */
 @keyframes reveal {
   from { clip-path: inset(0 100% 0 0); }
   to   { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* Banner fade-out: starts at 4.5s (after last reveal finishes at ~4s), lasts 1s */
+.animate-banner-out {
+  animation: fade-out 1s ease-out 4.5s both;
+}
+
+/* Hero elements are hidden until banner is gone, then clip-path reveal in */
+.hero-reveal {
+  clip-path: inset(0 100% 0 0);
+}
+.hero-visible .hero-reveal {
+  animation: reveal 1s steps(30, end) both;
 }

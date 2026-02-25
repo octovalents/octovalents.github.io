@@ -34,7 +34,7 @@ export default function Navbar() {
       <a href="#" className="logo flex flex-row items-center no-underline text-[1.5em] ml-[6.5vw] max-nav:ml-[3vw] max-md:ml-[1vw]">
         <OctovalentsSVG {...LOGO_COLORS[theme]} size={35} />
         <p className="logo-text font-bold uppercase tracking-[2px] ml-[1vw] transition-colors duration-[600ms]">
-          Benidictus
+          Home
         </p>
       </a>
 

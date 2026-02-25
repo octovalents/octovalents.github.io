@@ -12,7 +12,9 @@ export default function App() {
       >
         <Navbar />
       </header>
-      <Banner />
+      <main>
+        <Banner />
+      </main>
     </ThemeProvider>
   );
 }
