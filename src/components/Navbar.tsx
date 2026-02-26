@@ -33,16 +33,24 @@ export default function Navbar() {
       {/* Logo */}
       <a href="#" className="logo flex flex-row items-center no-underline text-[1.5em] ml-[6.5vw] max-nav:ml-[3vw] max-md:ml-[1vw]">
         <OctovalentsSVG {...LOGO_COLORS[theme]} size={35} />
-        <p className="logo-text font-bold uppercase tracking-[2px] ml-[1vw] transition-colors duration-[600ms]">
+        <p className="text-(--nav-text) group-[.sticky]:text-(--nav-text-sticky) font-bold uppercase tracking-[2px] ml-[1vw] transition-colors duration-600">
           Home
         </p>
       </a>
 
-      <div />
+      {/* Nav links */}
+      <nav className="flex items-center gap-1 mr-[0.5vw]">
+        {['Projects'].map((item) => (
+          <a
+            key={item}
+            href={`#${item.toLowerCase()}`}
+            className="nav-link text-(--nav-text) hover:text-(--nav-text-hover) group-[.sticky]:text-(--nav-text-sticky) group-[.sticky]:hover:text-(--nav-text-sticky-hover) transition-colors duration-200 px-3 py-2 text-sm font-semibold uppercase tracking-[1.5px]"
+          >
+            {item}
+          </a>
+        ))}
 
-      {/* Nav */}
-      <nav className="flex mr-[0.5vw]">
-        <a onClick={toggleTheme} className="nav-link cursor-pointer px-[15px] py-[10px] mx-5">
+        <a onClick={toggleTheme} className="text-(--nav-text) hover:text-(--nav-text-hover) group-[.sticky]:text-(--nav-text-sticky) group-[.sticky]:hover:text-(--nav-text-sticky-hover) transition-colors duration-100 cursor-pointer px-3 py-2 ml-2">
           {theme === 'dark' ? <MoonIcon /> : <SunIcon />}
         </a>
       </nav>

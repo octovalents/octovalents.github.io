@@ -5,7 +5,6 @@
 
 @theme {
   --font-sans: "Manrope", sans-serif;
-  --animate-reveal: reveal 1s steps(30, end) both;
 
   /* Custom breakpoints — usable as max-nav:, max-wide: prefixes in Tailwind */
   --breakpoint-nav: 68.75rem;   /* 1100px — nav layout boundary */
@@ -23,6 +22,10 @@
   --nav-text-sticky-hover: #ccc;
   --accent: #00ba34;
   --muted: #42474c;
+  --card-border: #e5e7eb;
+  --card-bg: #fafafa;
+  --tag-bg: #f0fdf4;
+  --tag-text: #166534;
 }
 
 html.dark {
@@ -35,83 +38,10 @@ html.dark {
   --nav-text-sticky-hover: #1f98af;
   --accent: #0df6e3;
   --muted: #f3f0f5;
-}
-
-/* ── Base ─────────────────────────────────────────────────── */
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--body-bg);
-  min-height: 100vh;
-  transition: background 0.6s;
-}
-
-/* ── Semantic colour helpers ──────────────────────────────── */
-.nav-link {
-  color: var(--nav-text);
-}
-.nav-link:hover {
-  color: var(--nav-text-hover);
-  transition-duration: 0.1s;
-}
-.logo-text {
-  color: var(--nav-text);
-}
-.banner-accent {
-  color: var(--accent);
-}
-.banner-muted {
-  color: var(--muted);
-}
-
-/* Fluid display-size text for the hero banner */
-.text-banner {
-  font-size: clamp(2.5rem, 7.06vw - 1.85rem, 5rem);
-}
-
-/* ── Hero section ────────────────────────────────────────── */
-.text-hero-name {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  color: var(--accent);
-}
-.text-hero-title {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--muted);
-}
-.text-hero-summary {
-  font-size: clamp(0.95rem, 1.5vw, 1.125rem);
-  color: var(--muted);
-}
-.hero-btn-outline {
-  color: var(--accent);
-  border: 2px solid var(--accent);
-  padding: 0.75rem 1.75rem;
-  font-weight: 600;
-  transition: background 0.2s, color 0.2s;
-}
-.hero-btn-outline:hover {
-  background: var(--accent);
-  color: var(--body-bg);
-}
-.hero-btn-solid {
-  background: var(--accent);
-  color: var(--body-bg);
-  border: 2px solid var(--accent);
-  padding: 0.75rem 1.75rem;
-  font-weight: 600;
-  transition: opacity 0.2s;
-}
-.hero-btn-solid:hover {
-  opacity: 0.85;
-}
-.hero-social {
-  color: var(--muted);
-  transition: color 0.2s;
-}
-.hero-social:hover {
-  color: var(--accent);
+  --card-border: #2a2240;
+  --card-bg: #2a2240;
+  --tag-bg: #1a2e3a;
+  --tag-text: #0df6e3;
 }
 
 /* ── Header sticky overrides ──────────────────────────────── */
@@ -120,36 +50,9 @@ body {
   padding-bottom: 1.25rem;
   background: var(--navbar-bg);
 }
-#site-header.sticky .logo-text {
-  color: var(--nav-text-sticky);
-}
-#site-header.sticky .nav-link {
-  color: var(--nav-text-sticky);
-}
-#site-header.sticky .nav-link:hover {
-  color: var(--nav-text-sticky-hover);
-}
 
 /* ── Animations ──────────────────────────────────────────── */
-@keyframes reveal {
-  from { clip-path: inset(0 100% 0 0); }
-  to   { clip-path: inset(0 0 0 0); }
-}
-
-@keyframes fade-out {
-  from { opacity: 1; }
-  to   { opacity: 0; }
-}
-
-/* Banner fade-out: starts at 4.5s (after last reveal finishes at ~4s), lasts 1s */
-.animate-banner-out {
-  animation: fade-out 1s ease-out 4.5s both;
-}
-
-/* Hero elements are hidden until banner is gone, then clip-path reveal in */
-.hero-reveal {
-  clip-path: inset(0 100% 0 0);
-}
-.hero-visible .hero-reveal {
-  animation: reveal 1s steps(30, end) both;
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
