@@ -54,7 +54,7 @@ export default function Contact() {
           className="flex items-center justify-center gap-2.5 max-w-max mx-auto bg-gray-100 rounded-lg py-2.5 px-4 cursor-pointer transition-colors duration-200 select-none hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 mt-8"
         >
           <span className="text-(--fg) text-lg font-mono">
-            {copied ? 'Copied!' : EMAIL}
+            {copied ? 'Copied!' : 'Copy Email Address'}
           </span>
           <span className="text-(--muted) transition-colors duration-200">
             {copied ? <CheckIcon size={18} /> : <CopyIcon size={18} />}
