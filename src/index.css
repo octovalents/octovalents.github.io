@@ -21,6 +21,7 @@
   --nav-text-sticky: #fff;
   --nav-text-sticky-hover: #ccc;
   --accent: #00ba34;
+  --fg: #333333;
   --muted: #42474c;
   --card-border: #e5e7eb;
   --card-bg: #fafafa;
@@ -40,6 +41,7 @@ html.dark {
   --nav-text-sticky: #0df6e3;
   --nav-text-sticky-hover: #1f98af;
   --accent: #0df6e3;
+  --fg: #F8F9FA;
   --muted: #f3f0f5;
   --card-border: #2a2240;
   --card-bg: #2a2240;

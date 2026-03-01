@@ -31,7 +31,7 @@ export default function Contact() {
   function handleCopy() {
     navigator.clipboard.writeText(EMAIL).then(() => {
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      setTimeout(() => setCopied(false), 3000);
     });
   }
 
@@ -45,16 +45,20 @@ export default function Contact() {
           Interested in working together? Feel free to reach out.
         </p>
 
-        <div className="flex items-center justify-center gap-2 mt-8">
-          <span className="text-(--fg) text-lg font-mono">{EMAIL}</span>
-          <button
-            type="button"
-            onClick={handleCopy}
-            aria-label={copied ? 'Copied' : 'Copy email'}
-            className="text-(--muted) hover:text-(--accent) transition-colors duration-200 p-1"
-          >
+        <div
+          role="button"
+          tabIndex={0}
+          onClick={handleCopy}
+          onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') handleCopy(); }}
+          aria-label={copied ? 'Copied' : 'Copy email'}
+          className="flex items-center justify-center gap-2.5 max-w-max mx-auto bg-gray-100 rounded-lg py-2.5 px-4 cursor-pointer transition-colors duration-200 select-none hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 mt-8"
+        >
+          <span className="text-(--fg) text-lg font-mono">
+            {copied ? 'Copied!' : EMAIL}
+          </span>
+          <span className="text-(--muted) transition-colors duration-200">
             {copied ? <CheckIcon size={18} /> : <CopyIcon size={18} />}
-          </button>
+          </span>
         </div>
 
         <a
