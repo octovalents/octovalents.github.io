@@ -15,28 +15,14 @@ export type Project = {
 const projects: Project[] = [
   {
     title: 'Jangkau AI',
-    summary: 'AI-powered customer support platform serving real-time messaging across WhatsApp channels.',
-    tags: ['Python', 'LangGraph', 'FastAPI', 'Rails'],
+    summary:
+      'AI-powered customer support platform built on LangGraph agent, customized Chatwoot fork, and Go-based WhatsApp gateway — orchestrating real-time messaging across channels.',
+    tags: ['Python', 'LangGraph', 'FastAPI', 'Rails', 'Vue.js', 'Go', 'PostgreSQL', 'Redis', 'Sidekiq'],
     links: [
-      { label: 'GitHub', url: 'https://github.com/octovalents' },
+      { label: 'GitHub', url: 'https://github.com/radyalabs/chatwoot' },
+      { label: 'Website', url: 'https://jangkau.ai/en' },
     ],
     featured: true,
-  },
-  {
-    title: 'go-whatsapp-web-multidevice',
-    summary: 'Multi-device WhatsApp Web API gateway built for high-throughput message routing.',
-    tags: ['Go', 'Fiber', 'whatsmeow'],
-    links: [
-      { label: 'GitHub', url: 'https://github.com/octovalents' },
-    ],
-  },
-  {
-    title: 'Chatwoot (Custom Fork)',
-    summary: 'Extended open-source customer engagement suite with AI agent integrations.',
-    tags: ['Rails', 'Vue.js', 'PostgreSQL', 'Sidekiq'],
-    links: [
-      { label: 'GitHub', url: 'https://github.com/octovalents' },
-    ],
   },
   {
     title: 'Portfolio',
@@ -44,7 +30,7 @@ const projects: Project[] = [
     tags: ['React', 'TypeScript', 'Tailwind v4'],
     links: [
       { label: 'GitHub', url: 'https://github.com/octovalents/octovalents.github.io' },
-      { label: 'Live', url: 'https://octovalents.github.io' },
+      { label: 'Website', url: 'https://octovalents.github.io' },
     ],
   },
 ];

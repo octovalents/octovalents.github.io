@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex flex-col items-center justify-center px-[5vw] text-center"
+      className="hero-mesh min-h-screen flex flex-col items-center justify-center px-[5vw] text-center"
     >
       <h1 className="text-[clamp(2rem,5vw,3.5rem)] text-(--accent) font-bold uppercase tracking-[2px] opacity-0 animate-[fade-in_0.8s_ease-out_both] [animation-delay:0.1s]">
         Benidictus Galih

@@ -11,7 +11,7 @@ function ExternalLinkIcon({ size = 16 }: { size?: number }) {
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="flex flex-col rounded-lg border-2 border-(--card-border) bg-(--card-bg) hover:border-(--accent) p-6 transition-colors duration-200">
+    <article className="flex flex-col rounded-lg border-2 border-(--card-border) bg-(--card-bg) hover:border-(--accent) p-8 transition-colors duration-200">
       {project.thumbnail && (
         <img
           src={project.thumbnail}
@@ -40,7 +40,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         ))}
       </div>
 
-      <div className="flex gap-4 mt-4 pt-4 border-t border-(--card-border)">
+      <div className="flex gap-4 mt-6 pt-6 border-t border-(--card-border)">
         {project.links.map(({ label, url }) => (
           <a
             key={url}
