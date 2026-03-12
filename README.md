@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+# octovalents.github.io
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site — a single-page application serving as a fast, accessible showcase of projects and contact info.
 
-Currently, two official plugins are available:
+Live at [octovalents.github.io](https://octovalents.github.io)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## React Compiler
+| Layer | Tool | Version |
+|-------|------|---------|
+| UI | React | 19 |
+| Language | TypeScript | 5.9 |
+| Bundler | Vite | 6.4 |
+| Styling | Tailwind CSS (Vite plugin) | 4.2 |
+| Linting | ESLint + react-hooks + react-refresh | 10 |
+| Deploy | GitHub Actions → GitHub Pages | - |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Project Structure
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── components/       # Page sections (Hero, Projects, Contact, Navbar, ProjectCard)
+├── context/          # ThemeContext — dark/light mode via localStorage
+├── data/             # Static project data (projects.ts)
+├── hooks/            # Custom hooks (useSticky — sticky navbar on scroll)
+├── icons/            # SVG icon components (social icons, logo)
+├── index.css         # Global styles, font imports, CSS custom properties
+├── main.tsx          # React root mount
+└── App.tsx           # Root component — assembles Navbar, Hero, Projects, Contact
+public/               # Static assets (favicon, project thumbnails)
+.github/workflows/    # CI/CD — deploy.yml builds and deploys to GitHub Pages
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Setup
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Prerequisites: **Node.js >= 18** and **npm**
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone git@github.com:octovalents/octovalents.github.io.git
+cd octovalents.github.io
+npm install
 ```
+
+## Local Development
+
+```bash
+npm run dev       # Vite dev server with HMR
+npm run build     # TypeScript check + production build → dist/
+npm run preview   # Serve production build locally
+npm run lint      # Run ESLint
+```
+
+Deployment is automatic — pushing to `main` triggers the GitHub Actions workflow that builds and deploys to GitHub Pages.
+
+## Contact
+
+- [LinkedIn](https://www.linkedin.com/in/benidictusgalihmp/)
+- [GitHub](https://github.com/octovalents)
+- [Kaggle](https://www.kaggle.com/benidictusgalihmp)
